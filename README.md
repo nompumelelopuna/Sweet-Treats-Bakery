@@ -1,4 +1,4 @@
-# Sweet Treats Bakery — WEDE5020 Final POE (Part 3)
+## Sweet Treats Bakery — WEDE5020 Final POE (Part 3)
 
 **Student:** Nompumelelo Tshabalala  
 **Year:** 2026
@@ -17,7 +17,7 @@ The website is designed for local customers and visitors interested in cakes, br
 | About | Provides information about the bakery and its background. |
 | Products | Displays bakery products with interactive browsing features. |
 | Enquiry | Allows customers to enquire about products and custom orders. |
-| Contact | Provides contact information, a contact form and a map. |
+| Contact | Provides contact information, a contact form and an interactive map. |
 
 **Main objectives:**
 - Showcase bakery products.
@@ -45,18 +45,19 @@ The website is designed for local customers and visitors interested in cakes, br
 |---|---|
 | Responsive design | Adapts the website layout to different screen sizes. |
 | Mobile navigation | Provides navigation suitable for smaller screens. |
-| Product cards | Displays products using JavaScript-generated cards. |
-| Product search | Allows visitors to search for products, including by name. |
+| Product cards | Displays products using JavaScript-generated cards and product photographs. |
+| Product search | Allows visitors to search for products by name. |
 | Category filtering | Filters products according to their category. |
 | Product sorting | Sorts products by price and name. |
-| Image lightbox | Opens product images in a larger modal view. |
+| Product photographs | Displays eight individual bakery product photographs. |
+| Image lightbox | Opens product photographs in a larger modal view. |
 | FAQ accordion | Allows visitors to expand and collapse frequently asked questions. |
 | Form validation | Checks required fields before form submission. |
 | Cost estimation | Calculates an estimated cost for selected enquiry options. |
 | Contact form | Prepares a message through the visitor's email application. |
-| Interactive map | Displays the general Soweto area using Leaflet. |
-| SEO metadata | Includes page titles, descriptions and supporting sitemap files. |
-| Accessibility | Includes labelled form controls, keyboard focus styling and a skip link. |
+| Interactive map | Displays the general Soweto area using Leaflet and OpenStreetMap. |
+| SEO metadata | Includes page titles, descriptions and meta keywords, as well as supporting sitemap files. |
+| Accessibility | Includes labelled form controls, descriptive image alternative text, keyboard focus styling and a skip link. |
 
 ### Form Functionality Limitations
 
@@ -81,7 +82,7 @@ The website is published using GitHub Pages.
 |---|---|
 | GitHub repository | https://github.com/nompumelelopuna/Sweet-Treats-Bakery |
 | Live website | https://nompumelelopuna.github.io/Sweet-Treats-Bakery/ |
-| Screenshot evidence | [Evidence folder](Evidence/) |
+| Screenshot evidence | `Evidence/` folder in the repository |
 
 ## 6. Changelog
 
@@ -90,13 +91,14 @@ The website is published using GitHub Pages.
 | Part 1 (2026) | Created the five foundational HTML pages and bakery concept. | Established the website content, navigation and target audience. |
 | Part 2 (September 2026) | Added external CSS, media queries, responsive layout and hover states. | Improved consistency and usability across screen sizes. |
 | Part 3 (November 2026) | Expanded the README with project documentation, testing information and Harvard-style references. | Improved documentation following feedback on the previous submission. |
-| Part 3 (November 2026) | Updated all HTML pages to reference `script.js` in the repository root folder. | Ensures JavaScript loads correctly across all website pages. |
+| Part 3 (November 2026) | Updated HTML pages to reference `script.js` in the repository root folder. | Ensures JavaScript loads correctly across website pages. |
 | Part 3 (November 2026) | Removed the intrusive welcome alert and introduced accessible mobile navigation. | Improved user experience and keyboard navigation. |
 | Part 3 (November 2026) | Rebuilt the product display with search, filtering, sorting and modal lightbox functionality. | Added dynamic content and interactive features. |
 | Part 3 (November 2026) | Added FAQ accordions, animations, form validation, sample order estimates and email handoff. | Improved website functionality and form interaction. |
 | Part 3 (November 2026) | Added an interactive Leaflet map displaying the general Soweto area. | Provides geographical context without claiming an unverified street address. |
 | Part 3 (November 2026) | Added individual SEO metadata, semantic headings, sitemap and robots files. | Improved technical structure and search engine optimisation. |
 | Part 3 (November 2026) | Published the website using GitHub Pages and added screenshot evidence. | Made the website publicly accessible and documented project progress. |
+| Part 3 (November 2026) | Added eight individual product photographs and updated the product gallery and lightbox. | Improved product presentation and image accessibility through descriptive alternative text. |
 
 ## 7. Testing and Results
 
@@ -105,24 +107,24 @@ The following functionality tests were completed on the website.
 | Test | Expected Result | Actual Result | Status |
 |---|---|---|---|
 | Mobile navigation | Menu opens and closes correctly. | Navigation works correctly. | Passed |
-| Product display | Product cards display correctly. | Products are displayed. | Passed |
+| Product display | Product cards display correctly. | Product photographs and details are displayed. | Passed |
 | Product search | Searching for a product such as `cake` returns matching results. | Matching products are displayed. | Passed |
 | Product sorting | Products reorder by price. | Low-to-high sorting works. | Passed |
+| Product filtering | Selecting a category displays matching products. | Category filtering is available. | Passed |
 | Enquiry required fields | Incomplete submissions are blocked. | Required-field validation works. | Passed |
-| Enquiry cost estimation | Completed enquiry displays an estimated cost. | Estimated cost is displayed. | Passed |
+| Enquiry cost estimation | Selecting a product and quantity displays an estimated cost. | Estimated cost is displayed. | Passed |
 | Product lightbox | Image opens and close button dismisses it. | Lightbox opens and closes. | Passed |
 | FAQ accordion | Answers expand and collapse. | Accordion works correctly. | Passed |
-| Contact form | Send Message opens the email application. | Email application opens with a prepared message. | Passed |
+| Contact form validation | Empty submissions are blocked. | Required-field validation works. | Passed |
+| Contact email handoff | Prepare email opens the email application with message details. | Email application opens with a prepared message. | Passed |
 | Mobile landscape layout | Content remains usable without awkward horizontal scrolling. | Layout remains usable. | Passed |
-| Map display | Map displaying the general Soweto area is visible. | Map is visible. | Passed |
+| Interactive map | Map displaying the general Soweto area is visible. | Map is visible. | Passed |
 
 Desktop, tablet and additional browser compatibility tests should only be marked as passed after being independently tested on those devices or browsers.
 
 ## 8. Screenshot Evidence
 
 Screenshots of the website's mobile layout and functionality tests, together with desktop and tablet layout previews, are available in the `Evidence` folder.
-
-
 
 **Note:** Desktop and tablet images are layout previews and should not be treated as screenshots captured from live desktop or tablet devices.
 
@@ -135,7 +137,8 @@ Screenshots of the website's mobile layout and functionality tests, together wit
 | Bakery Soweto | Fresh bread |
 | Cakes Soweto | Pastries |
 | Custom cakes Soweto | Birthday cakes |
-| | Bakery enquiries |
+| Bakery Johannesburg | Bakery enquiries |
+| Sweet Treats Bakery | Cupcakes |
 
 These keywords are incorporated naturally into page titles, descriptions, headings and website content.
 
@@ -145,6 +148,8 @@ These keywords are incorporated naturally into page titles, descriptions, headin
 |---|---|
 | Page titles | Individual titles for website pages. |
 | Meta descriptions | Descriptions added to website pages. |
+| Meta keywords | Supporting keywords added to page metadata. |
+| Image optimisation | Descriptive product image filenames and alternative text. |
 | Semantic HTML | Structured headings and page elements. |
 | Sitemap | `sitemap.xml` lists the website pages. |
 | Robots file | `robots.txt` provides crawler instructions. |
@@ -189,6 +194,17 @@ W3Schools. (n.d.) *JavaScript form validation*. Available at: https://www.w3scho
 
 ## 12. Original Assets
 
-Product illustration graphics are generated programmatically in JavaScript as SVG with emoji. No external bakery photographs or third-party logos are included.
+The product gallery includes eight individual bakery product photographs stored in the `images/` folder:
 
-Fonts are served by Google Fonts and map tiles by OpenStreetMap. Any additional external images should have their licences and references documented.
+- `chocolate-celebration-cake.jpg`
+- `vanilla-strawberry-cake.jpg`
+- `pink-frosted-cupcakes.jpg`
+- `fresh-bread-loaf.jpg`
+- `soft-bread-rolls.jpg`
+- `butter-croissants.jpg`
+- `fruit-pastries.jpg`
+- `cinnamon-swirl-rolls.jpg`
+
+These images are used in the JavaScript-generated product cards and enlarged product lightbox.
+
+The website also uses Google Fonts for typography and Leaflet with OpenStreetMap for the interactive map. External resources are acknowledged in the references section.
