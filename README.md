@@ -31,7 +31,7 @@ Publish the contents of this folder to Netlify or GitHub Pages. After deployment
 | Part 1 (2026) | Created the five foundational HTML pages and proposed bakery concept. | Established content, navigation and target audience. |
 | Part 2 (September 2026) | Added external CSS, media queries, responsive layout and hover states. | Improved consistency and usability on different screens. |
 | Part 3 (November 2026) | Expanded README with detailed changelog, test evidence checklist, limitations and Harvard-style references. | Addresses lecturer's feedback that Part 2 documentation was too brief. |
-| Part 3 (November 2026) | Fixed JavaScript file location: original files referenced `js/script.js` but ZIP stored it under `css/js/script.js`; moved script to `js/script.js`. | Ensures JavaScript actually loads. |
+| Part 3 (November 2026) | Fixed JavaScript file location: Updated all HTML pages to reference `script.js` in the repository root folder. | Ensures JavaScript loads correctly across all website pages.
 | Part 3 (November 2026) | Removed intrusive welcome alert; introduced accessible mobile navigation. | Better UX and keyboard navigation. |
 | Part 3 (November 2026) | Rebuilt product display as data-driven cards with search, filters, sorting and modal lightbox. | Meets dynamic content and interactive element requirements. |
 | Part 3 (November 2026) | Added FAQ accordions, animations, form validation, sample order estimate and email handoff. | Meets JavaScript and form requirements. |
