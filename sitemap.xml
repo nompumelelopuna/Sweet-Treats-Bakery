@@ -1,3 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Replace example.com with the actual deployed domain before submission. -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://nompumelelopuna.github.io/Sweet-Treats-Bakery/
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://nompumelelopuna.github.io/Sweet-Treats-Bakery/</loc>
+  </url>
+  <url>
+    <loc>https://nompumelelopuna.github.io/Sweet-Treats-Bakery/about.html</loc>
+  </url>
+  <url>
+    <loc>https://nompumelelopuna.github.io/Sweet-Treats-Bakery/products.html</loc>
+  </url>
+  <url>
+    <loc>https://nompumelelopuna.github.io/Sweet-Treats-Bakery/enquiry.html</loc>
+  </url>
+  <url>
+    <loc>https://nompumelelopuna.github.io/Sweet-Treats-Bakery/contact.html</loc>
+  </url>
+</urlset>
