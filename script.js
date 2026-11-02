@@ -259,3 +259,19 @@ emailForm(
   ],
   "#contact-error"
 );
+// Interactive map on the Contact page
+window.addEventListener("load", () => {
+  const mapElement = document.querySelector("#map");
+
+  if (!mapElement || !window.L) return;
+
+  const map = L.map("map").setView([-26.2678, 27.8585], 12);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  L.marker([-26.2678, 27.8585])
+    .addTo(map)
+    .bindPopup("Soweto, Johannesburg");
+});
