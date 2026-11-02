@@ -1,1 +1,110 @@
-<!doctype html><html lang="en-ZA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Request a custom cake or bakery order and calculate an indicative estimate at Sweet Treats Bakery."><meta name="theme-color" content="#603c34"><title>Custom Order Enquiry | Sweet Treats Bakery Soweto</title><link rel="stylesheet" href="style.css"><script defer src="script.js"></script></head><body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="top"><a class="brand" href="index.html">✦ Sweet Treats <span>Bakery</span></a><button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu ☰</button><nav id="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="enquiry.html" aria-current="page">Enquiry</a><a href="contact.html">Contact</a></nav></div></header><main id="main"><section class="page-hero"><p class="eyebrow">LET'S MAKE IT SPECIAL</p><h1>Custom order enquiry</h1><p>Tell us about your celebration and calculate a sample estimate.</p></section><section class="section narrow"><form id="enquiry-form" action="mailto:info@sweettreatsbakery.co.za" method="post" enctype="text/plain"><div class="two"><label>Full name *<input name="name" required minlength="2" maxlength="80" autocomplete="name"></label><label>Email address *<input name="email" type="email" required autocomplete="email"></label></div><div class="two"><label>Phone number *<input name="phone" type="tel" required pattern="[+0-9 ()-]{9,18}" title="Enter a valid phone number" autocomplete="tel"></label><label>Preferred date *<input name="date" type="date" required id="order-date"></label></div><div class="two"><label>Product *<select name="product" id="order-product" required><option value="">Select a product</option><option value="cake">Celebration cake (R350)</option><option value="cupcakes">Cupcakes, box of 6 (R120)</option><option value="bread">Bread loaf (R35)</option><option value="pastry">Pastry box (R95)</option></select></label><label>Quantity *<input name="quantity" id="quantity" type="number" min="1" max="50" value="1" required></label></div><label>Details of your request *<textarea name="details" rows="5" minlength="10" maxlength="1000" required placeholder="Flavour, colours, occasion, dietary requests..."></textarea></label><p id="estimate" class="estimate" aria-live="polite">Select a product to view an estimated cost.</p><p id="enquiry-error" class="error" role="alert"></p><button class="btn" type="submit">Prepare order email</button><p class="small">Submitting validates your information and opens your email application with the request. You must press Send in your email app. No order is placed automatically; estimate is not a quotation.</p></form></section></main><footer><div><strong>Sweet Treats Bakery</strong><p>Family-run bakery in Soweto since 2010.</p></div><div><a href="products.html">Browse treats</a> · <a href="enquiry.html">Custom orders</a> · <a href="contact.html">Contact us</a><p>© 2026 Sweet Treats Bakery · Student demonstration website</p></div></footer><div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged product image"><button id="lightbox-close" aria-label="Close image">×</button><img id="lightbox-image" alt=""><p id="lightbox-caption"></p></div></body></html>
+
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Request a custom cake or bakery order and calculate an indicative estimate at Sweet Treats Bakery.">
+  <meta name="keywords" content="Sweet Treats Bakery, Soweto bakery, custom cake orders, cake enquiry, cupcakes, bread, pastries, bakery orders, Johannesburg bakery">
+  <meta name="theme-color" content="#603c34">
+  <title>Custom Order Enquiry | Sweet Treats Bakery Soweto</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="top">
+      <a class="brand" href="index.html">✦ Sweet Treats <span>Bakery</span></a>
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu ☰</button>
+      <nav id="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="enquiry.html" aria-current="page">Enquiry</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <p class="eyebrow">LET'S MAKE IT SPECIAL</p>
+      <h1>Custom order enquiry</h1>
+      <p>Tell us about your celebration and calculate a sample estimate.</p>
+    </section>
+
+    <section class="section narrow">
+      <form id="enquiry-form" action="mailto:info@sweettreatsbakery.co.za" method="post" enctype="text/plain">
+        <div class="two">
+          <label>Full name *
+            <input name="name" required minlength="2" maxlength="80" autocomplete="name">
+          </label>
+          <label>Email address *
+            <input name="email" type="email" required autocomplete="email">
+          </label>
+        </div>
+
+        <div class="two">
+          <label>Phone number *
+            <input name="phone" type="tel" required pattern="[+0-9 ()-]{9,18}" title="Enter a valid phone number" autocomplete="tel">
+          </label>
+          <label>Preferred date *
+            <input name="date" type="date" required id="order-date">
+          </label>
+        </div>
+
+        <div class="two">
+          <label>Product *
+            <select name="product" id="order-product" required>
+              <option value="">Select a product</option>
+              <option value="cake">Celebration cake (R350)</option>
+              <option value="cupcakes">Cupcakes, box of 6 (R120)</option>
+              <option value="bread">Bread loaf (R35)</option>
+              <option value="pastry">Pastry box (R95)</option>
+            </select>
+          </label>
+          <label>Quantity *
+            <input name="quantity" id="quantity" type="number" min="1" max="50" value="1" required>
+          </label>
+        </div>
+
+        <label>Details of your request *
+          <textarea name="details" rows="5" minlength="10" maxlength="1000" required placeholder="Flavour, colours, occasion, dietary requests..."></textarea>
+        </label>
+
+        <p id="estimate" class="estimate" aria-live="polite">Select a product to view an estimated cost.</p>
+        <p id="enquiry-error" class="error" role="alert"></p>
+
+        <button class="btn" type="submit">Prepare order email</button>
+
+        <p class="small">Submitting validates your information and opens your email application with the request.
+          You must press Send in your email app.
+          No order is placed automatically; estimate is not a quotation.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Sweet Treats Bakery</strong>
+      <p>Family-run bakery in Soweto since 2010.</p>
+    </div>
+    <div>
+      <a href="products.html">Browse treats</a> ·
+      <a href="enquiry.html">Custom orders</a> ·
+      <a href="contact.html">Contact us</a>
+      <p>© 2026 Sweet Treats Bakery · Student demonstration website</p>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged product image">
+    <button id="lightbox-close" aria-label="Close image">×</button>
+    <img id="lightbox-image" alt="">
+    <p id="lightbox-caption"></p>
+  </div>
+</body>
+</html>
+>
