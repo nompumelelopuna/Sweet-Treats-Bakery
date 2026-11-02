@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# Add a Sitemap URL after publishing the final site.
