@@ -64,6 +64,10 @@ Primary: `bakery Soweto`, `cakes Soweto`, `custom cakes Soweto`. Secondary: `fre
 ## Security, privacy and performance
 No personal form data is stored in browser storage or sent to a third-party server by this code. Text in product cards is inserted with `textContent`, reducing HTML injection risk. The website uses no authentication or payment processing. For real public use, configure HTTPS on hosting, a verified email destination, anti-spam measures, a privacy notice and a secure backend if online form processing is required. Assets are small and external scripts are deferred; test real-world page speed with Lighthouse before reporting scores.
 
+## Screenshot Evidence
+
+Screenshots of the website's mobile layout, functionality tests, and desktop/tablet previews are available in the Evidence folder.
+
 ## References (Harvard style)
 CSS-Tricks. (2020) *A complete guide to CSS media queries*. Available at: https://css-tricks.com/a-complete-guide-to-css-media-queries/ (Accessed: 22 September 2026).
 
