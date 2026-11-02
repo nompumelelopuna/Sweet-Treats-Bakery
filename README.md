@@ -126,8 +126,6 @@ Desktop, tablet and additional browser compatibility tests should only be marked
 
 Screenshots of the website's mobile layout and functionality tests, together with desktop and tablet layout previews, are available in the `Evidence` folder.
 
-**Note:** Desktop and tablet images are layout previews and should not be treated as screenshots captured from live desktop or tablet devices.
-
 ## 9. SEO and Keyword Strategy
 
 ### Keyword Strategy
