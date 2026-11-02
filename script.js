@@ -1,52 +1,12 @@
-// Welcome Message
-
-window.addEventListener("load", () => {
-  alert("Welcome to Sweet Treats Bakery!");
-});
-
-// Active Navigation Link
-
-const links = document.querySelectorAll("nav a");
-
-links.forEach(link => {
-  if(link.href === window.location.href){
-    link.style.backgroundColor = "white";
-    link.style.color = "#d2691e";
-  }
-});
-
-// Contact / Enquiry Form Validation
-
-const form = document.querySelector("form");
-
-if(form){
-
-  form.addEventListener("submit", function(event){
-
-    const inputs = document.querySelectorAll("input, textarea");
-
-    let valid = true;
-
-    inputs.forEach(input => {
-
-      if(input.value.trim() === ""){
-        valid = false;
-      }
-
-    });
-
-    if(!valid){
-
-      event.preventDefault();
-
-      alert("Please complete all fields.");
-
-    } else {
-
-      alert("Form Submitted Successfully!");
-
-    }
-
-  });
-
-}
+"use strict";
+const $=s=>document.querySelector(s);
+const menu=$("#menu-toggle");if(menu)menu.addEventListener("click",()=>{const open=menu.getAttribute("aria-expanded")==="true";menu.setAttribute("aria-expanded",String(!open));$("#nav").classList.toggle("open",!open)});
+const products=[{name:"Chocolate celebration cake",category:"Cakes",price:350,emoji:"🎂",color:"#b88b79"},{name:"Vanilla birthday cake",category:"Cakes",price:320,emoji:"🍰",color:"#edc7c5"},{name:"Cupcakes (box of 6)",category:"Cakes",price:120,emoji:"🧁",color:"#e8b3ad"},{name:"Classic bread loaf",category:"Breads",price:35,emoji:"🍞",color:"#dfbb8b"},{name:"Soft bread rolls (6)",category:"Breads",price:48,emoji:"🥖",color:"#e4c59e"},{name:"Butter croissants (4)",category:"Pastries",price:95,emoji:"🥐",color:"#efcc8f"},{name:"Fruit pastry selection",category:"Pastries",price:110,emoji:"🥧",color:"#dfb5a2"},{name:"Cinnamon swirls (4)",category:"Pastries",price:85,emoji:"🍥",color:"#d7a994"}];
+const grid=$("#product-grid");const lightbox=$("#lightbox");
+function renderProducts(){if(!grid)return;const q=$("#search").value.toLowerCase().trim(),cat=$("#category").value,sort=$("#sort").value;const list=products.filter(x=>(cat==="all"||x.category===cat)&&x.name.toLowerCase().includes(q));list.sort((a,b)=>sort==="price-asc"?a.price-b.price:sort==="price-desc"?b.price-a.price:a.name.localeCompare(b.name));grid.replaceChildren();list.forEach(x=>{const article=document.createElement("article");article.className="product";const photo=document.createElement("button");photo.className="product-photo";photo.type="button";photo.style.background=x.color;photo.textContent=x.emoji;photo.setAttribute("aria-label","Enlarge illustration of "+x.name);photo.addEventListener("click",()=>openLightbox(x));const detail=document.createElement("div");detail.className="product-detail";const catEl=document.createElement("p");catEl.className="eyebrow";catEl.textContent=x.category;const h=document.createElement("h3");h.textContent=x.name;const price=document.createElement("p");price.textContent="From R"+x.price+" · sample price";detail.append(catEl,h,price);article.append(photo,detail);grid.append(article)});$("#product-count").textContent=list.length+" treat"+(list.length===1?"":"s")+" found"}if(grid){["#search","#category","#sort"].forEach(s=>$(s).addEventListener("input",renderProducts));renderProducts()}
+let lastFocus=null;function openLightbox(x){lastFocus=document.activeElement;const im=$("#lightbox-image");const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400"><rect width="600" height="400" rx="20" fill="${x.color}"/><text x="300" y="245" font-size="150" text-anchor="middle">${x.emoji}</text></svg>`;im.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg);im.alt="Illustration of "+x.name;$("#lightbox-caption").textContent=x.name;lightbox.hidden=false;$("#lightbox-close").focus()}function closeLightbox(){lightbox.hidden=true;if(lastFocus)lastFocus.focus()}if(lightbox){$("#lightbox-close").addEventListener("click",closeLightbox);lightbox.addEventListener("click",e=>{if(e.target===lightbox)closeLightbox()});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!lightbox.hidden)closeLightbox();if(e.key==="Tab"&&!lightbox.hidden){e.preventDefault();$("#lightbox-close").focus()}})}
+const today=new Date();today.setDate(today.getDate()+2);const date=$("#order-date");if(date)date.min=`${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,"0")}-${String(today.getDate()).padStart(2,"0")}`;
+const prices={cake:350,cupcakes:120,bread:35,pastry:95};function estimate(){if(!$("#estimate"))return;const key=$("#order-product").value,n=Number($("#quantity").value);$("#estimate").textContent=prices[key]&&n>=1&&n<=50?`Illustrative estimate: R${prices[key]*n} (excluding customisation and delivery). Subject to confirmation.`:"Select a product and valid quantity to view an estimated cost."}if($("#estimate")){["#order-product","#quantity"].forEach(s=>$(s).addEventListener("input",estimate));estimate()}
+function emailForm(id,subject,fields,errorId){const form=$(id);if(!form)return;form.addEventListener("submit",e=>{e.preventDefault();const error=$(errorId);error.textContent="";if(!form.reportValidity())return;const data=new FormData(form);for(const [key,val] of data){if(typeof val==="string"&&!val.trim()){error.textContent="Please complete all required fields.";return}}if(id==="#enquiry-form"&&new Date(data.get("date")+"T00:00:00")<new Date(date.min+"T00:00:00")){error.textContent="Please choose a date at least two days ahead.";return}const lines=fields.map(([label,key])=>label+": "+data.get(key));if(id==="#enquiry-form")lines.push($("#estimate").textContent);const url="mailto:info@sweettreatsbakery.co.za?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(lines.join("\n"));window.location.href=url})}
+emailForm("#enquiry-form","Sweet Treats Bakery custom order enquiry",[["Name","name"],["Email","email"],["Phone","phone"],["Preferred date","date"],["Product","product"],["Quantity","quantity"],["Details","details"]],"#enquiry-error");emailForm("#contact-form","Sweet Treats Bakery contact message",[["Name","name"],["Email","email"],["Type","type"],["Message","message"]],"#contact-error");
+window.addEventListener("load",()=>{if($("#map")&&window.L){const map=L.map("map").setView([-26.2485,27.854],11);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);L.circle([-26.2485,27.854],{radius:5500,color:"#965e52",fillOpacity:.12}).addTo(map).bindPopup("Soweto area — bakery address not verified")}});
