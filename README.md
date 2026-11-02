@@ -22,8 +22,8 @@ Download the project, extract the ZIP, and open `index.html` in a browser. For r
 ## Deployment
 Publish the contents of this folder to Netlify or GitHub Pages. After deployment, update **all five** URLs in `sitemap.xml` from `https://example.com` to your actual public URL, and add `Sitemap: https://YOUR-LIVE-URL/sitemap.xml` to `robots.txt`. Confirm the deployed pages, map and email handoff work. Paste the final URL and GitHub repository URL below:
 
-- GitHub repository: **[ADD YOUR REPOSITORY URL]**
-- Live website: **[ADD YOUR DEPLOYED URL]**
+- GitHub repository: https://github.com/nompumelelopuna/Sweet-Treats-Bakery
+- Live website: https://nompumelelopuna.github.io/Sweet-Treats-Bakery/
 
 ## Changelog
 | Phase / date | Change | Reason / feedback addressed |
