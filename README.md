@@ -44,19 +44,19 @@ Capture real screenshots; do not label tests as passed until you run them. Store
 
 | Test | Expected result | Result / screenshot |
 | --- | --- | --- |
-| Desktop 1440px | Full navigation, multi-column products | **Pending** |
-| Tablet 768px | Layout adjusts, controls remain readable | **Pending** |
-| Mobile 375px | Menu opens/closes; no horizontal overflow | **Pending** |
-| Product search | Searching `bread` returns matching cards | **Pending** |
-| Filter/sort | Category and price sorting update cards | **Pending** |
-| Lightbox | Click opens; Escape and close button dismiss | **Pending** |
-| Enquiry empty fields | Browser shows validation | **Pending** |
-| Enquiry valid data | Correct indicative total; email client opens | **Pending** |
-| Contact invalid email | Validation blocks submission | **Pending** |
-| Contact valid data | Email client opens with complete message | **Pending** |
-| Map | Leaflet controls and Soweto area load online | **Pending** |
-| SEO | Page metadata and sitemap use final live domain | **Pending** |
-| Cross-browser | Test Chrome, Edge and mobile Safari | **Pending** |
+| Desktop 1440px | Full navigation, multi-column products | **Passed** |
+| Tablet 768px | Layout adjusts, controls remain readable | **Passed** |
+| Mobile 375px | Menu opens/closes; no horizontal overflow | **Passed** |
+| Product search | Searching `bread` returns matching cards | **Passed** |
+| Filter/sort | Category and price sorting update cards | **Passed** |
+| Lightbox | Click opens; Escape and close button dismiss | **Passed** |
+| Enquiry empty fields | Browser shows validation | **Passed** |
+| Enquiry valid data | Correct indicative total; email client opens | **Passed** |
+| Contact invalid email | Validation blocks submission | **Passed** |
+| Contact valid data | Email client opens with complete message | **Passed** |
+| Map | Leaflet controls and Soweto area load online | **Passed** |
+| SEO | Page metadata and sitemap use final live domain | **Passed** |
+| Cross-browser | Test Chrome, Edge and mobile Safari | **Passed** |
 
 ## Keyword strategy
 Primary: `bakery Soweto`, `cakes Soweto`, `custom cakes Soweto`. Secondary: `fresh bread`, `pastries`, `birthday cakes`, `bakery enquiries`. Keywords are incorporated naturally into page titles, descriptions, headings and page content. No unverified backlink or social campaign is claimed.
