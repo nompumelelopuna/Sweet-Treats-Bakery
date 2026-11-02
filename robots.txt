@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-# Add a Sitemap URL after publishing the final site.
+
+Sitemap: https://nompumelelopuna.github.io/Sweet-Treats-Bakery/sitemap.xml
